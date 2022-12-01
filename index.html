@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+ 
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Sprint 1</title>
+  </head>
+  <body>
+     <!--Navigation-->
+      <div class="tab-bottom" >
+        <div class=" ">
+             <h5 class="  text-white"><span class="date-time"></span></h5>
+         </div>
+             <div class=" ">
+               <h5 class="text-white"><span class="time"></span> </h5>
+             </div>
+               <div class="">
+                 <button type="button"  id="add-task-btn" data-bs-toggle="modal" data-bs-target="#add-task" onclick="themeFunction()" >
+                   DAY/NIGHT</button>
+              
+             </div>
+          </div>
+    <!--nav-end-->
+
+
+<!-- jumbotron-->
+<div class="container-fluid jumbotron ">
+<div class="jumbotron-fluid">
+  <div class="lead">
+    <h2 class=" text-center  " style="letter-spacing:2px ;"> ““We acknowledge the Traditional Custodians of the land We pay our respects to Elders past and present.””</h2>
+  </div>
+  </div>
+</div>
+
+    <!--Form input-->
+    <section id="tasks">
+    <div class="container mt-1 ">   
+        <h1 class="text-center mb-5">TASK FORM</h1>  
+              <form id="form" class="row g-3">
+                 <!--Input Task-->
+                <div class="col-md-4 input-group">
+                  <input
+                     class="form-control"
+                      id="InputValue"
+                      type="text"
+                      placeholder="TASK NAME"
+                      name="InputValue"
+                    />
+                    <br>
+                    <p>Error message</p>
+                </div>
+                <!--Input assigned-->
+                <div class="col-md-4 input-group">
+                 <input class="form-control" type="text" id="assignValue" name="assignValue"  placeholder="ASSIGNED TO">
+                 <br>
+                 <p>Error Message</p>
+                </div>
+                <!--Input Status-->
+                <div class="col-md-4 input-group">
+                  <select  class="form-select" id="statusValue" name="statusValue" >
+                    <option value="">SELECT STATUS</option>
+                    <option value="STARTED">STARTED</option>
+                    <option value="IN-PROGRESS">IN-PROGRESS</option>
+                    <option value="REVIEWED">REVIEWED</option>
+                    <option value="DONE">DONE</option>
+                  </select>
+                  <br>
+                  <p>Error Message</p>
+                </div>
+                 <!--Due Date-->
+                <div class="col-md-2  input-group" class="date">
+                  <label class="form-label" for="dateValue"><strong>DUE DATE: </strong> :</label>
+                 <input id="dateValue" type="date" name="dateValue"/>
+                 <br>
+                 <p>Error Message</p>
+                </div>
+                 <!--Desc-->
+                <div class=" col-md-4 input-group">
+                  <textarea class="form-control"  id="descValue" name="descValue" rows="4" cols="50" placeholder="DESCRIPTION"></textarea>
+                  <br>
+                  <p>Error Message</p>
+                </div>
+                <div class ="col-md-4"></div>
+                <div class ="col-md-4 button-col">
+                  <button id="submitBtn" type="submit" class="btn btn-warning mb-5 mx-5"><i class="fa-solid fa-plus"></i><a href="#task-container">ADD Task</a></button></div>
+                <div class ="col-md-4"></div>
+              </form>
+           </div>
+          </section>
+    
+<!-- Filter status to display tasks
+<div class="input-group">
+  <label for="statusValueFiltered">Status</label>
+  <select id="statusValueFiltered" name="statusValueFiltered">
+    <option value="STARTED">STARTED</option>
+    <option value="In-Progress">IN-PROGRESS</option>
+    <option value="REVIEWED">REVIEWED</option>
+    <option value="DONE">DONE</option>
+    <option value="All-Status">All-STATUS</option>
+  </select>
+</div>
+<div>
+-->
+<div class="container bg-light py-4 mt-5 " id="task-container" >
+  <h2 class="text-center mb-5">Task Details</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4" id="task-card">
+      </div>
+    </div>
+
+    <!--parralex-->
+    <div class="parralex">
+      <div class="quotes">
+        <h5>Success is the result of perfection, hard work, learning from failure, loyalty, and persistence-Colin Powell</h5>
+      </div>
+    </div> 
+       
+<!--our Team-->
+<section class="team" id="team" >
+  <div class="container ">
+      <div class="row justify-content-center">
+          <div class="c0l-lg-8">
+              <div class="section-title text-center">
+                  <h2 class="fw-b mb-4 text-white bg-secondary py-3 px-5">Our Team</h2>
+              </div>
+              
+           </div>
+          </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-xl-7" >
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                    <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class=" bg-dark" aria-label="Slide 2"></button>
+                    <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class=" bg-dark" aria-label="Slide 3"></button>
+                  </div>
+              <div class="carousel-inner p-1">
+              <div class=" carousel-item active bg-white shadow-lg rounded p-4 mb-5">
+                  <div class="testi-author-info d-flex align-items-center">
+                      <img src="./images/port2.png"  alt="info" width="304" height="236">
+                      <div class="author ms-3">
+                          <h3 class="fs-6 mb-1">Shahan Ahmad</h3>
+                          <p class="text-muted m-0">Junior Front-end Developer</p>
+                      </div>
+                  </div>
+                  <p class="text-muted mt-3">Shahan has been  efficient and supportive, asked great questions that helped us think through any offer, and brought great creativity and insight to the final product.</p>
+                      <div class="rating text-danger">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+              </div>
+              <div class=" carousel-item  bg-white shadow-lg rounded p-4 mb-5">
+                  <div class="testi-author-info d-flex align-items-center">
+                      <img src="./images/port1.png"  alt="info" width="304" height="236">
+                      <div class="author ms-3">
+                          <h3 class="fs-6 mb-1">Rikki</h3>
+                          <p class="text-muted m-0">Junior Front-end-Developer</p>
+                      </div>
+                  </div>
+                  <p class="text-muted mt-3">With her skills and natural creativity, she works quickly and efficiently, presenting professional options and offering sound advice to translate the vision in my head into work beyond  envisioned</p>
+                      <div class="rating text-danger">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+              </div>
+              <div class=" carousel-item  bg-white shadow-lg rounded p-4 mb-5">
+                  <div class="testi-author-info d-flex align-items-center">
+                      <img src="./images/port.png"  alt="info" width="304" height="236">
+                      <div class="author ms-3">
+                          <h3 class="fs-6 mb-1">Maria</h3>
+                          <p class="text-muted m-0">Junior Front-end-Developer</p>
+                      </div>
+                  </div>
+                  <p class="text-muted mt-3">Maria has been terrific- collaborative, diligent, honest and professional, offering solutions we had not thought about. We have found that she delivers efficiently and in a timely manner..</p>
+                      <div class="rating text-danger">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+              </div>
+             </div>
+           </div>
+       </div>
+    </div>
+  </div>
+</section>
+<!---->
+
+ 
+<footer class="py-3 text-center bg-secondary text-white">
+    <p>Copy Right @ CodeDen</p>
+</footer>
+   
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+    <script src="./dateNtime.js"></script>
+  </body>
+</html>

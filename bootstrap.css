@@ -1,0 +1,179 @@
+
+html{
+  scroll-behavior: smooth;
+  }
+  body {
+    background-attachment: fixed;
+    padding: 25px;
+    background:url("./Images/white.jpg");
+    color: rgb(178, 173, 173);
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    /* Created with https://www.css-gradient.com */
+background: #313546;
+background: -webkit-linear-gradient(top left, #313546, #020717);
+background: -moz-linear-gradient(top left, #313546, #020717);
+background: linear-gradient(to bottom right, #313546, #020717);;
+    color: rgb(46, 51, 53);
+  }
+  .tab-bottom{
+    position:sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(88, 108, 123);
+   height: 50px;
+   z-index: 1000;
+  }
+
+  .container-nav p{
+    display: inline-block;
+    width: 300px;
+  }
+ 
+  .jumbotron{
+    background-image: url(./Images/fn2.jpg);
+    background-size: cover;
+    height: 10rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+    color: white;
+    
+  }
+  .jumbotron h2{
+    font-size:12px ;
+    padding: 10px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .container{
+    width: 50%;
+  }
+  #tasks{
+    width: 60%;
+    margin-left: 20%;
+    height: 600px;
+    align-content: center;
+    flex-wrap: nowrap;
+    border-radius: 40px;
+    background: #ffffff;
+    box-shadow: 15px 15px 20px 0px rgb(127, 129, 147);
+  }
+  #form{
+    background-color: rgb(225, 226, 227);
+    border-radius: 40px;
+    width: 90%;
+    margin-left: 40px;
+    box-shadow: 5px 5px 10px 0px rgb(180, 173, 173);
+  }
+  .input-group{
+    width: 300px!important;
+    border-radius: 5px;
+    margin-left: 15px;
+  }
+  .input-group input,select,textarea{
+    border-radius: 10px;
+  }
+  #dateValue{
+    width: 250px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+
+  .card:hover {
+    border-style: none;
+    box-shadow: 15px 15px 40px 0px rgb(58, 35, 35);
+    transition: 1s;
+  }
+  .parralex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: no-repeat;
+    background-attachment: fixed;
+    background-image:url("./Images/parral.jpg");
+    height: 20rem;
+  }
+  .quotes{
+    background-color: rgb(42, 43, 44);
+    color: #fff;
+    opacity: 0.5;
+    border-radius: 5px;
+  }
+  .quotes{
+    padding: 15px;
+  }
+  .error input {
+    border:3px red solid;
+  }
+  .error select {
+    border:3px red solid;
+  }
+  .error textarea {
+    border:3px red solid;
+  }
+  
+  .success input {
+    border:3px green solid;
+  }
+  .success select {
+    border:3px green solid;
+  }
+  
+  .success textarea {
+    border:3px green solid;
+  }
+  
+  .input-group p {
+     font-size: 15px;
+     color:red;
+     visibility: hidden;
+    
+     }
+   
+  
+  .error p {
+     visibility: visible;
+  }
+#submitBtn a{
+  color: rgb(16, 9, 9) !important;
+  text-decoration: none !important;
+  transition:all 2s ease-in-out;
+}
+  #submitBtn:hover{
+    background-color: rgb(85, 102, 114) !important;
+    color: #fff !important;
+    transition:all 2s ease-in-out;
+  }
+  #submitBtn a:hover{
+    color: #fff !important;
+  }
+  
+  #add-task-btn{
+  border: none;
+  border-radius: 10px;
+  color: rgb(57, 63, 67);
+  transition: 1s all ease-in-out;
+  }
+  #add-task-btn:hover{
+    background-color: rgb(8, 8, 8);
+    color: #fff;
+  }
+  @media (max-width: 668px) {
+    .tab-bottom{
+      flex-direction: column;
+      height: 150px;
+    }
+    #dateValue{
+      width: 150px;
+    }
+  }
